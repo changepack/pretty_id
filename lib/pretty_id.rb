@@ -46,6 +46,6 @@ module PrettyId
   private
 
   def set_pretty_id
-    self.id = PrettyId::Generator.new(self).id
+    self.id ||= PrettyId::Generator.new(self).id
   end
 end
